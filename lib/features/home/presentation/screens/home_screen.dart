@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
           child: Column(
-            spacing: 20,
+            spacing: 15,
             children: [
               const HomeCarousel(),
               TotalInfoWidget(),
