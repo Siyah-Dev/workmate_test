@@ -1,0 +1,4 @@
+enum TopperTab {
+  ward,
+  contributors,
+}

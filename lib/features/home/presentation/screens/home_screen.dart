@@ -1,4 +1,5 @@
 import 'package:ch_centre/features/home/presentation/widgets/quick_pay_section.dart';
+import 'package:ch_centre/features/home/presentation/widgets/toppers_section.dart';
 import 'package:ch_centre/features/home/presentation/widgets/total_info_widget.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -9,8 +10,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
@@ -23,6 +22,8 @@ class HomeScreen extends StatelessWidget {
               TotalInfoWidget(),
               const SizedBox(height: 30),
               const QuickPaySection(),
+              const SizedBox(height: 20),
+              const ToppersSection(),
             ],
           ),
         ),
@@ -30,5 +31,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
