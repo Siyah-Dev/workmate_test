@@ -13,20 +13,18 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            spacing: 15,
-            children: [
-              const HomeCarousel(),
-              TotalInfoWidget(),
-              const SizedBox(height: 10),
-              const QuickPaySection(),
-              const ToppersSection(),
-              const DatesChallengeButton()
-            ],
-          ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          spacing: 7,
+          children: [
+            const HomeCarousel(),
+            TotalInfoWidget(),
+            const SizedBox(height: 10),
+            const QuickPaySection(),
+            const ToppersSection(),
+            const DatesChallengeButton()
+          ],
         ),
       ),
     );

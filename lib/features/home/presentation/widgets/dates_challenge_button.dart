@@ -1,4 +1,5 @@
 import 'package:ch_centre/core/theme/app_colors.dart';
+import 'package:ch_centre/features/order_screen/presentation/screens/order_screen.dart';
 import 'package:flutter/material.dart';
 
 class DatesChallengeButton extends StatelessWidget {
@@ -9,7 +10,9 @@ class DatesChallengeButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => OrderScreen()));
+        },
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(10),
           backgroundColor: AppColors.primary,
@@ -22,7 +25,8 @@ class DatesChallengeButton extends StatelessWidget {
             Expanded(
               child: const Text(
                 'ഈത്തപ്പഴ ചലഞ്ചില്‍ പങ്കെടുക്കുക',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 16,),textAlign: TextAlign.end,
+                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 16),
+                textAlign: TextAlign.end,
               ),
             ),
             Icon(Icons.arrow_circle_right_outlined, color: AppColors.whiteColor, size: 54),
