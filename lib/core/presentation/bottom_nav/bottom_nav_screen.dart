@@ -12,14 +12,16 @@ class BottomNavScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedTab = ref.watch(bottomNavProvider);
 
-    return Scaffold(
-      body: _buildBody(selectedTab),
-      bottomNavigationBar: AppCurvedBottomNav(
-        index: BottomNavTab.values.indexOf(selectedTab),
-        onTap: (index) {
-          ref.read(bottomNavProvider.notifier).state =
-              BottomNavTab.values[index];
-        },
+    return SafeArea(
+      child: Scaffold(
+        body: _buildBody(selectedTab),
+        bottomNavigationBar: AppCurvedBottomNav(
+          index: BottomNavTab.values.indexOf(selectedTab),
+          onTap: (index) {
+            ref.read(bottomNavProvider.notifier).state =
+                BottomNavTab.values[index];
+          },
+        ),
       ),
     );
   }
