@@ -1,3 +1,4 @@
+import 'package:ch_centre/features/home/presentation/widgets/dates_challenge_button.dart';
 import 'package:ch_centre/features/home/presentation/widgets/quick_pay_section.dart';
 import 'package:ch_centre/features/home/presentation/widgets/toppers_section.dart';
 import 'package:ch_centre/features/home/presentation/widgets/total_info_widget.dart';
@@ -16,14 +17,14 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
           child: Column(
+            spacing: 20,
             children: [
               const HomeCarousel(),
-              const SizedBox(height: 20),
               TotalInfoWidget(),
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               const QuickPaySection(),
-              const SizedBox(height: 20),
               const ToppersSection(),
+              const DatesChallengeButton()
             ],
           ),
         ),

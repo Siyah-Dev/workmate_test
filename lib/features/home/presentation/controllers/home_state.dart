@@ -24,6 +24,8 @@ class HomeState {
     wardToppers: [
       TopperModel(ward: 'Thoombathparamba', position: 9, amount: 5.00, isGold: true),
       TopperModel(ward: 'Valakkulam', position: 8, amount: 2.00, isGold: false),
+      TopperModel(ward: 'Thoombathparamba', position: 9, amount: 5.00, isGold: true),
+      TopperModel(ward: 'Valakkulam', position: 8, amount: 2.00, isGold: false),
     ],
   );
 

@@ -79,11 +79,7 @@ class _ToppersSectionState extends ConsumerState<ToppersSection>
             child: TabBarView(
               controller: _tabController,
               children: [
-                Column(
-                  children: wardToppers
-                      .map((topper) => TopperTile(topper: topper))
-                      .toList(),
-                ),
+                ListView.builder(itemCount: wardToppers.length, itemBuilder: (context, index) => TopperTile(topper: wardToppers[index]),),
 
                 const Center(
                   child: Text(
