@@ -37,7 +37,7 @@ class _ToppersSectionState extends ConsumerState<ToppersSection>
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color:  AppColors.lightYellow,
-        borderRadius: BorderRadius.circular(14),
+        // borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
