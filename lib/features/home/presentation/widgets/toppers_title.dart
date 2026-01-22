@@ -5,10 +5,7 @@ import '../../../../core/theme/app_colors.dart';
 class TopperTile extends StatelessWidget {
   final TopperModel topper;
 
-  const TopperTile({
-    super.key,
-    required this.topper,
-  });
+  const TopperTile({super.key, required this.topper});
 
   @override
   Widget build(BuildContext context) {
@@ -20,30 +17,26 @@ class TopperTile extends StatelessWidget {
           Row(
             children: [
               Icon(
-                topper.isGold
-                    ? Icons.emoji_events
-                    : Icons.emoji_events_outlined,
+                topper.isGold ? Icons.emoji_events : Icons.emoji_events_outlined,
                 color: topper.isGold ? AppColors.yellowColor : AppColors.greyColor,
                 size: 20,
               ),
               const SizedBox(width: 8),
               Text(
                 '${topper.ward} - ${topper.position}',
-                style: const TextStyle(
-                  fontWeight: FontWeight.w500,
-                ),
+                style: const TextStyle(fontWeight: FontWeight.w500),
               ),
             ],
           ),
 
           Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 10,
-              vertical: 4,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
               color: AppColors.primary,
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(14),
+                bottomLeft: Radius.circular(14),
+              ),
             ),
             child: Text(
               '₹ ${topper.amount.toStringAsFixed(2)}',

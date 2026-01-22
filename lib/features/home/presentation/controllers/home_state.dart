@@ -4,36 +4,41 @@ class HomeState {
   final int totalBox;
   final double amount;
   final int selectedQuickPay;
+  final List<int> quickPayValues;
   final List<TopperModel> wardToppers;
 
   const HomeState({
     required this.totalBox,
     required this.amount,
     required this.selectedQuickPay,
+    required this.quickPayValues,
     required this.wardToppers,
+    
   });
 
-  factory HomeState.initial() =>
-      const HomeState(totalBox: 6, amount: 7, selectedQuickPay: 1, wardToppers: [
-       TopperModel(
-        ward: 'Thoombathparamba',
-        position: 9,
-        amount: 5.00,
-        isGold: true,
-      ),
-       TopperModel(
-        ward: 'Valakkulam',
-        position: 8,
-        amount: 2.00,
-        isGold: false,
-      ),
-    ]);
+  factory HomeState.initial() => const HomeState(
+    totalBox: 6,
+    amount: 7,
+    selectedQuickPay: 1,
+    quickPayValues: [1, 2, 3, 5, 8],
+    wardToppers: [
+      TopperModel(ward: 'Thoombathparamba', position: 9, amount: 5.00, isGold: true),
+      TopperModel(ward: 'Valakkulam', position: 8, amount: 2.00, isGold: false),
+    ],
+  );
 
-  HomeState copyWith({int? totalBox, double? amount, int? selectedQuickPay, List<TopperModel>? wardToppers}) {
+  HomeState copyWith({
+    int? totalBox,
+    double? amount,
+    int? selectedQuickPay,
+    List<int>? quickPayValues,
+    List<TopperModel>? wardToppers,
+  }) {
     return HomeState(
       totalBox: totalBox ?? this.totalBox,
       amount: amount ?? this.amount,
       selectedQuickPay: selectedQuickPay ?? this.selectedQuickPay,
+      quickPayValues: quickPayValues ?? this.quickPayValues,
       wardToppers: wardToppers ?? this.wardToppers,
     );
   }

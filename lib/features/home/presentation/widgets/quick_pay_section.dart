@@ -8,9 +8,9 @@ class QuickPaySection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(homeControllerProvider);
+    final selectedQuickPay = ref.watch(homeControllerProvider.select((state) =>state.selectedQuickPay,));
 
-    final values = [1, 2, 3, 5, 8];
+    final values =ref.watch(homeControllerProvider.select((state) =>state.quickPayValues,)) ;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +37,7 @@ class QuickPaySection extends ConsumerWidget {
                 .map(
                   (v) => QuickPayButton(
                     value: v,
-                    selected: state.selectedQuickPay == v,
+                    selected: selectedQuickPay == v,
                     onTap: () =>
                         ref.read(homeControllerProvider.notifier).selectQuickPay(v),
                   ),
