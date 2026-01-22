@@ -22,7 +22,7 @@ class HomeCarousel extends StatelessWidget {
         height: 180,
         autoPlay: true,
         enlargeCenterPage: true,
-        viewportFraction: 0.9,
+        viewportFraction: 1.0,
       ),
     );
   }
